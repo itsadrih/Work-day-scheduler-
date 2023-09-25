@@ -58,7 +58,7 @@
     section12.val(localStorage.getItem("hour-8"));
   
     
-    var date = dayjs().format('DD-MM-YYYY');
+    var date = dayjs().format('MM-DD-YYYY');
     $('#currentDay').text(date);
   
     function timeCheck() {
