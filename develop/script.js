@@ -1,4 +1,4 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
+ // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 //$(function () {
@@ -21,10 +21,7 @@
   //
   // TODO: Add code to display the current date in the header of the page.
 
-  //
-  $(document).ready(function () {
-
-    $('.saveBtn').on('click', function (){
+     $('.saveBtn').on('click', function (){
       var input = $(this).siblings('.description').val()
       var timeId = $(this).parent().attr('id')
       localStorage.setItem(timeId, input)
@@ -40,9 +37,7 @@
     let section7 = $("#hour-3 .description");
     let section8 = $("#hour-4 .description");
     let section9 = $("#hour-5 .description");
-    let section10 = $("#hour-6 .description");
-    let section11 = $("#hour-7 .description");
-    let section12 = $("#hour-8 .description");
+
   
     section1.val(localStorage.getItem("hour-9"));
     section2.val(localStorage.getItem("hour-10"));
@@ -53,10 +48,7 @@
     section7.val(localStorage.getItem("hour-3"));
     section8.val(localStorage.getItem("hour-4"));
     section9.val(localStorage.getItem("hour-5"));
-    section10.val(localStorage.getItem("hour-6"));
-    section11.val(localStorage.getItem("hour-7"));
-    section12.val(localStorage.getItem("hour-8"));
-  
+    
     
     var date = dayjs().format('MM-DD-YYYY');
     $('#currentDay').text(date);
@@ -76,6 +68,4 @@
           $(this).removeClass('present, past').addClass('future');
         }
       });
-    }
-    
-    })
+    } 
